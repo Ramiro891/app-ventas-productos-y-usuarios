@@ -12,10 +12,10 @@ export default async function Usuarios() {
     const usuarios = await getUsuarios();
     return (
         <>
-            <h1 style={{ textAlign: 'center', color: '#333' }}>Usuarios</h1>
-            <table style={{ width: '80%', margin: '20px auto', borderCollapse: 'collapse', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+            <h1 style={headerStyle}>Usuarios</h1>
+            <table style={tableStyle}>
                 <thead>
-                    <tr style={{ backgroundColor: '#007bff', color: '#fff' }}>
+                    <tr style={headerRowStyle}>
                         <th style={tabEncabezado}>Id</th>
                         <th style={tabEncabezado}>Nombre</th>
                         <th style={tabEncabezado}>Usuario</th>
@@ -24,14 +24,30 @@ export default async function Usuarios() {
                 </thead>
                 <tbody>
                     {usuarios.map((usuario, i) => (
-                        <tr key={i} style={i % 2 === 0 ? { backgroundColor: '#f9f9f9' } : { backgroundColor: '#ffffff' }}>
+                        <tr
+                            key={i}
+                            style={
+                                i % 2 === 0
+                                    ? { backgroundColor: "#f9f9f9" }
+                                    : { backgroundColor: "#ffffff" }
+                            }
+                        >
                             <td style={tabstyle2}>{i + 1}</td>
                             <td style={tabstyle2}>{usuario.nombre}</td>
                             <td style={tabstyle2}>{usuario.usuario}</td>
                             <td style={tabstyle2}>
                                 <BorrarUsuario id={usuario.id} />
                                 <> / </>
-                                <Link href={`/usuarios/modificar/${encodeURIComponent(JSON.stringify({ id: usuario.id, nombre: usuario.nombre, usuario: usuario.usuario }))}`}>
+                                <Link
+                                    href={`/usuarios/modificar/${encodeURIComponent(
+                                        JSON.stringify({
+                                            id: usuario.id,
+                                            nombre: usuario.nombre,
+                                            usuario: usuario.usuario,
+                                        })
+                                    )}`}
+                                    style={linkStyle}
+                                >
                                     Modificar
                                 </Link>
                             </td>
@@ -39,37 +55,71 @@ export default async function Usuarios() {
                     ))}
                 </tbody>
             </table>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                <Link href="/usuarios/nuevo" style={buttonStyle}>Nuevo</Link>
+            <div style={buttonContainerStyle}>
+                <Link href="/usuarios/nuevo" style={buttonStyle}>
+                    Nuevo Usuario
+                </Link>
             </div>
         </>
     );
 }
 
 // Estilos
+const headerStyle = {
+    textAlign: "center",
+    color: "#fff",
+    marginTop: "30px",
+    fontSize: "28px",
+    backgroundColor: "#dc3545", // Rojo
+    padding: "15px",
+};
+
+const tableStyle = {
+    width: "80%",
+    margin: "20px auto",
+    borderCollapse: "collapse",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+};
+
+const headerRowStyle = {
+    backgroundColor: "#dc3545", // Rojo
+    color: "#fff",
+};
+
 const tabEncabezado = {
-    padding: '10px',
-    border: '1px solid #ccc',
-    textAlign: 'left',
-    fontWeight: 'bold',
-    backgroundColor: '#007bff', // Azul
-    color: '#fff', // Blanco
+    padding: "12px",
+    border: "1px solid #ccc",
+    textAlign: "left",
+    fontWeight: "bold",
+    backgroundColor: "#dc3545", // Rojo
+    color: "#fff",
 };
 
 const tabstyle2 = {
-    padding: '10px',
-    border: '1px solid #ccc',
+    padding: "12px",
+    border: "1px solid #ccc",
 };
 
-// Estilo para el botón "Nuevo"
+const buttonContainerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "20px",
+};
+
 const buttonStyle = {
-    padding: '10px 20px',
-    backgroundColor: '#007bff', // Azul
-    color: '#fff', // Blanco
-    textDecoration: 'none',
-    borderRadius: '5px',
-    border: 'none',
-    cursor: 'pointer',
-    fontSize: '16px',
-    display: 'inline-block',
+    padding: "12px 20px",
+    backgroundColor: "#dc3545", // Rojo
+    color: "#fff",
+    textDecoration: "none",
+    borderRadius: "5px",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "16px",
+    display: "inline-block",
+};
+
+const linkStyle = {
+    color: "#dc3545", // Rojo
+    textDecoration: "none",
+    fontWeight: "bold",
 };

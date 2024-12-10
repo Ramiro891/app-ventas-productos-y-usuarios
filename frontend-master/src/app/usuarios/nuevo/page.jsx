@@ -45,7 +45,7 @@ const cardStyle = {
 };
 
 const headerStyle = {
-    backgroundColor: '#007bff', // Azul
+    backgroundColor: '#dc3545', // Rojo
     padding: '10px',
     textAlign: 'center',
     borderTopLeftRadius: '8px',
@@ -64,7 +64,7 @@ const inputStyle = {
 const buttonStyle = {
     width: '100%',
     padding: '10px',
-    backgroundColor: '#007bff', // Azul
+    backgroundColor: '#dc3545', // Rojo
     color: '#fff', // Blanco
     border: 'none',
     borderRadius: '5px',

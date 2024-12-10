@@ -15,9 +15,9 @@ async function nuevoProducto(e) {
 
 export default function Nuevo() {
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f0f8ff' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f8d7da' }}>
             <form style={{ width: '40%', marginTop: '5%', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }} onSubmit={nuevoProducto}>
-                <div style={{ backgroundColor: '#007bff', color: '#fff', padding: '15px', borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }}>
+                <div style={{ backgroundColor: '#dc3545', color: '#fff', padding: '15px', borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }}>
                     <h1 style={{ textAlign: 'center' }}>Nuevo Producto</h1>
                 </div>
                 <div style={{ padding: '20px' }}>
@@ -40,16 +40,14 @@ const inputStyle = {
     marginBottom: '15px',
     border: '1px solid #ccc',
     borderRadius: '5px',
-    backgroundColor: '#f8f9fa', // Color de fondo suave
-    color: '#333', // Color de texto
 };
 
 // Estilo para el botón
 const buttonStyle = {
     width: '100%',
     padding: '10px',
-    backgroundColor: '#007bff', // Azul
-    color: '#fff', // Blanco
+    backgroundColor: '#dc3545',  // Rojo
+    color: '#fff',
     border: 'none',
     borderRadius: '5px',
     cursor: 'pointer',

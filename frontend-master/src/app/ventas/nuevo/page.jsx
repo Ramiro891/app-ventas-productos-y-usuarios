@@ -20,7 +20,7 @@ export default function Nueva() {
     const buttonStyle = {
         width: '100%',
         padding: '10px',
-        backgroundColor: isHovered ? '#0056b3' : '#007bff', // Azul oscuro al pasar el ratón
+        backgroundColor: isHovered ? '#dc3545' : '#dc3545', // Rojo
         color: '#fff',
         border: 'none',
         borderRadius: '5px',
@@ -69,7 +69,7 @@ const cardStyle = {
 };
 
 const cardHeaderStyle = {
-    backgroundColor: '#007bff', // Azul
+    backgroundColor: '#dc3545', // Rojo
     padding: '15px',
     borderTopLeftRadius: '5px',
     borderTopRightRadius: '5px',

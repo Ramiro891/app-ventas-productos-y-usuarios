@@ -30,7 +30,7 @@ export default function Modificar({ params }) {
                         <h1 style={{ color: '#fff' }}>Modificar Venta</h1>
                     </div>
                     <div className="card-body">
-                        <input id="id" defaultValue={venta.id} type="text" style={inputStyle} className="d-none" />
+                        <input id="id" defaultValue={venta.id} type="text" style={{ display: 'none' }} />
                         <input id="cantidad" defaultValue={venta.cantidad} type="text" style={inputStyle} placeholder="Cantidad" />
                     </div>
                     <div className="card-footer">
@@ -51,7 +51,7 @@ const cardStyle = {
 };
 
 const headerStyle = {
-    backgroundColor: '#007bff', // Azul
+    backgroundColor: '#dc3545', // Rojo
     padding: '10px',
     textAlign: 'center',
     borderTopLeftRadius: '8px',
@@ -70,7 +70,7 @@ const inputStyle = {
 const buttonStyle = {
     width: '100%',
     padding: '10px',
-    backgroundColor: '#007bff', // Azul
+    backgroundColor: '#dc3545',  // Rojo
     color: '#fff', // Blanco
     border: 'none',
     borderRadius: '5px',

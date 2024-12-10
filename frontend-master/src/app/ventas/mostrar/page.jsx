@@ -16,7 +16,7 @@ export default async function Ventas() {
         border: '1px solid #ccc',
         textAlign: 'left',
         fontWeight: 'bold',
-        backgroundColor: '#007bff', // Azul para los encabezados
+        backgroundColor: '#dc3545', // Rojo para los encabezados
         color: '#fff'
     };
 
@@ -70,7 +70,7 @@ export default async function Ventas() {
 // Estilos para el botón de nueva venta
 const newButtonStyle = {
     padding: '10px 20px',
-    backgroundColor: '#007bff', // Azul
+    backgroundColor: '#dc3545', // Rojo
     color: '#fff',
     textDecoration: 'none',
     borderRadius: '5px',
@@ -80,7 +80,7 @@ const newButtonStyle = {
 
 // Estilo para el enlace de "Modificar"
 const linkStyle = {
-    color: '#007bff', // Azul
+    color: '#dc3545', // Rojo
     textDecoration: 'none',
     fontWeight: 'bold',
 };

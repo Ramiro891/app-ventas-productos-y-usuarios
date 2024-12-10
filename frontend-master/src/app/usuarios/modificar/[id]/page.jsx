@@ -25,9 +25,9 @@ export default function Modificar({ params }) {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f0f8ff' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f8f9fa' }}>
             <form style={{ width: '40%', marginTop: '5%', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }} onSubmit={modificarUsuario}>
-                <div style={{ backgroundColor: '#007bff', color: '#fff', padding: '15px', borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }}>
+                <div style={{ backgroundColor: '#dc3545', color: '#fff', padding: '15px', borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }}>
                     <h1 style={{ textAlign: 'center' }}>Modificar Usuario</h1>
                 </div>
                 <div style={{ padding: '20px' }}>
@@ -64,7 +64,7 @@ const hiddenInputStyle = {
 const buttonStyle = {
     width: '100%',
     padding: '10px',
-    backgroundColor: '#007bff', // Azul para el botón
+    backgroundColor: '#dc3545', // Rojo para el botón
     color: '#fff', // Texto blanco
     border: 'none',
     borderRadius: '5px',
