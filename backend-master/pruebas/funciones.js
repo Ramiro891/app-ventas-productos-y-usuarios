@@ -1,60 +1,60 @@
-function saludar(){
-    console.log("Hola");
+function despedir() {
+    console.log("Adiós");
 }
 
-saludar();
+despedir();
 
-function saludar2(nombre="anonimo"){
-    console.log("Hola "+nombre);
+function despedir2(nombre = "desconocido") {
+    console.log("Adiós " + nombre);
 }
 
-saludar2("Juan Perez");
+despedir2("Luis Gómez");
 
-function saludar3(nombre="anonimo"){
-    var s="Hola "+nombre;
-    return s;
+function despedir3(nombre = "desconocido") {
+    var mensaje = "Adiós " + nombre;
+    return mensaje;
 }
 
-console.log(saludar3("Juancho"));
+console.log(despedir3("Carlos"));
 
-var saludo=(nombre)=>{
-    console.log("Hola "+nombre);
+var despedida = (nombre) => {
+    console.log("Adiós " + nombre);
 }
 
-saludo("Menganito");
+despedida("Felipito");
 
-var saludo2=nombre=>{
-    console.log("Hola "+nombre);
+var despedida2 = (nombre) => {
+    console.log("Adiós " + nombre);
 }
-saludo2("Perenganito");
+despedida2("Pepito");
 
-var saludo3=nombre=>{
-    return "Hola "+nombre;
+var despedida3 = (nombre) => {
+    return "Adiós " + nombre;
 }
-console.log(saludo3("Tenganito"));
+console.log(despedida3("Juanito"));
 
-var saludo4=nombre=>"Hola "+nombre;
-console.log(saludo4("Pancracio"));
+var despedida4 = nombre => "Adiós " + nombre;
+console.log(despedida4("Marcelo"));
 
 
-var saludo5=function(){
-    console.log("hola");
+var despedida5 = function() {
+    console.log("Adiós");
 }
 
-saludo5();
+despedida5();
 
 
 (() => {
-    console.log("5");
+    console.log("10");
 })();
 
-var saludo6=()=>{
-    console.log("saludo6");
+var despedida6 = () => {
+    console.log("despedida6");
 }
 
-var saludo7=(nombre, s)=>{
-    console.log("hola"+nombre);
-    s();
+var despedida7 = (nombre, callback) => {
+    console.log("Adiós " + nombre);
+    callback();
 }
 
-saludo7("Bethoven",saludo6);
+despedida7("Beethoven", despedida6);
